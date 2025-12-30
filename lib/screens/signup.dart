@@ -22,11 +22,15 @@ class SignUpScreen extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Column(children: [Text("First Name")]),
-              Column(children: [Text("Other Names")]),
-              Column(children: [Text("Phone")]),
-              Column(children: [Text("Password")]),
-              Column(children: [Text("Confirm Password")]),
+              TextField(decoration: InputDecoration(label: Text("First Name"))),
+              TextField(decoration: InputDecoration(label: Text("Last Name"))),
+              TextField(
+                decoration: InputDecoration(label: Text("Phone Number")),
+              ),
+              TextField(decoration: InputDecoration(label: Text("Password"))),
+              TextField(
+                decoration: InputDecoration(label: Text("Confirm Password")),
+              ),
               OutlinedButton(
                 onPressed: () {},
                 child: Text("Create An Account"),
