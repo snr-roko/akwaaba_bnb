@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class Profile extends StatefulWidget {
-  const Profile({super.key});
+class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({super.key});
 
   @override
   State<StatefulWidget> createState() {
-    return ProfileState();
+    return ProfileScreenState();
   }
 }
 
-class ProfileState extends State<Profile> {
+class ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,12 +22,15 @@ class ProfileState extends State<Profile> {
         padding: EdgeInsetsGeometry.all(15.0),
         child: Column(
           children: [
-            GridView.count(
-              crossAxisCount: 2,
+            Row(
               children: [
                 Column(children: [Text("First Name"), TextField()]),
-                Column(children: [Text("Other Names"), TextField()]),
-                Column(children: [Text("Phone"), TextField()]),
+                Column(children: [Text("First Name"), TextField()]),
+              ],
+            ),
+            Row(
+              children: [
+                Column(children: [Text("Contact"), TextField()]),
                 Column(children: [Text("Email"), TextField()]),
               ],
             ),

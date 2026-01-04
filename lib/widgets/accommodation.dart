@@ -1,5 +1,6 @@
 import 'package:akwaaba_bnb/models/accommodation_model.dart';
 import 'package:flutter/material.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class AccommodationItem extends StatelessWidget {
   const AccommodationItem({super.key, required this.accommodation});
@@ -15,8 +16,13 @@ class AccommodationItem extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Image.network(accommodation.photo),
+          FadeInImage(
+            placeholder: MemoryImage(kTransparentImage),
+            image: NetworkImage(accommodation.photo),
+          ),
+          SizedBox(height: 20.0),
           Column(
+            spacing: 15.0,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(

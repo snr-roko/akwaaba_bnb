@@ -1,3 +1,4 @@
+import 'package:akwaaba_bnb/screens/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -6,6 +7,17 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    void onTapProfile(BuildContext context) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) {
+            return ProfileScreen();
+          },
+        ),
+      );
+    }
+
     void displayDeleteModalSheet() {
       showModalBottomSheet(
         context: context,
@@ -95,6 +107,9 @@ class SettingsScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10.0),
               ),
               child: InkWell(
+                onTap: () {
+                  onTapProfile(context);
+                },
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
