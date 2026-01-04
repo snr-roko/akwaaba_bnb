@@ -1,4 +1,5 @@
 import 'package:akwaaba_bnb/models/accommodation_model.dart';
+import 'package:akwaaba_bnb/screens/settings.dart';
 import 'package:akwaaba_bnb/widgets/accommodation.dart';
 import 'package:flutter/material.dart';
 
@@ -7,14 +8,32 @@ class ExploreScreen extends StatelessWidget {
 
   final List<Accommodation> accommodations;
 
+  void onTapOptions(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) {
+          return SettingsScreen();
+        },
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blueAccent,
         foregroundColor: Colors.white,
-        title: Text("Explore"),
-        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.settings))],
+        title: Text("Explore", style: TextStyle(fontWeight: FontWeight.bold)),
+        actions: [
+          IconButton(
+            onPressed: () {
+              onTapOptions(context);
+            },
+            icon: Icon(Icons.settings),
+          ),
+        ],
       ),
       body: Container(
         width: double.infinity,
