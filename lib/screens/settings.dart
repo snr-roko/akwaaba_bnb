@@ -1,6 +1,6 @@
+import 'package:akwaaba_bnb/screens/login.dart';
 import 'package:akwaaba_bnb/screens/profile.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -23,10 +23,7 @@ class SettingsScreen extends StatelessWidget {
         context: context,
         builder: (context) {
           return Padding(
-            padding: EdgeInsetsGeometry.symmetric(
-              vertical: 60.0,
-              horizontal: 15.0,
-            ),
+            padding: EdgeInsets.symmetric(vertical: 60.0, horizontal: 15.0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -95,7 +92,7 @@ class SettingsScreen extends StatelessWidget {
         title: Text("Settings", style: TextStyle(fontWeight: FontWeight.bold)),
       ),
       body: Padding(
-        padding: EdgeInsetsGeometry.all(20.0),
+        padding: EdgeInsets.all(20.0),
         child: GridView.count(
           mainAxisSpacing: 20.0,
           crossAxisSpacing: 10.0,

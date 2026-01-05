@@ -19,19 +19,25 @@ class ProfileScreenState extends State<ProfileScreen> {
         title: Text("Profile", style: TextStyle(fontWeight: FontWeight.bold)),
       ),
       body: Padding(
-        padding: EdgeInsetsGeometry.all(15.0),
+        padding: EdgeInsets.all(15.0),
         child: Column(
           children: [
             Row(
               children: [
-                Column(children: [Text("First Name"), TextField()]),
-                Column(children: [Text("First Name"), TextField()]),
+                Expanded(
+                  child: Column(children: [Text("First Name"), TextField()]),
+                ),
+                Expanded(
+                  child: Column(children: [Text("First Name"), TextField()]),
+                ),
               ],
             ),
             Row(
               children: [
-                Column(children: [Text("Contact"), TextField()]),
-                Column(children: [Text("Email"), TextField()]),
+                Expanded(
+                  child: Column(children: [Text("Contact"), TextField()]),
+                ),
+                Expanded(child: Column(children: [Text("Email"), TextField()])),
               ],
             ),
             ElevatedButton(onPressed: () {}, child: Text("Edit Profile")),

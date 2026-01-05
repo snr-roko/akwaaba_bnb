@@ -20,9 +20,9 @@ class AccommodationItem extends StatelessWidget {
             placeholder: MemoryImage(kTransparentImage),
             image: NetworkImage(accommodation.photo),
           ),
-          SizedBox(height: 20.0),
+          SizedBox(height: 10.0),
           Column(
-            spacing: 15.0,
+            spacing: 5.0,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
